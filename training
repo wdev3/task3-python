@@ -1,0 +1,15 @@
+perguta_produto = input("Quais produtos voce quer comprar? \n").split(",")
+pergunta_nome = input("Qual e seu nome?\n")
+pergunta_cidade = input("Insira o nome da sua cidade\n")
+pergunta_pagamento = input("Insira a forma de pagamento\n")
+
+
+def produtos_usuario_cadastro(*produtos, **dados):
+    print ("resumo do pedido")
+    print (f"Produtos: \n {produtos}")
+    print (f"Cliente: ")
+    for chave, valor in dados.items():
+        print (chave, "=", valor)
+    print (len(produtos))
+
+produtos_usuario_cadastro(perguta_produto, nome = pergunta_nome, ciade = pergunta_cidade, pagamento = pergunta_pagamento)
