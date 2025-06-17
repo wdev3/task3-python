@@ -1,15 +1,16 @@
-perguta_produto = input("Quais produtos voce quer comprar? \n").split(",")
-pergunta_nome = input("Qual e seu nome?\n")
-pergunta_cidade = input("Insira o nome da sua cidade\n")
-pergunta_pagamento = input("Insira a forma de pagamento\n")
+product_question = input("Which products do you want to buy?\n").split(",")
+name_question = input("What is your name?\n")
+city_question = input("Enter your city name\n")
+payment_question = input("Enter the payment method\n")
 
 
-def produtos_usuario_cadastro(*produtos, **dados):
-    print ("resumo do pedido")
-    print (f"Produtos: \n {produtos}")
-    print (f"Cliente: ")
-    for chave, valor in dados.items():
-        print (chave, "=", valor)
-    print (len(produtos))
+def user_order_registration(*products, **data):
+    print("Order summary")
+    print(f"Products:\n {products}")
+    print("Customer:")
+    for key, value in data.items():
+        print(key, "=", value)
+    print(len(products))
 
-produtos_usuario_cadastro(perguta_produto, nome = pergunta_nome, ciade = pergunta_cidade, pagamento = pergunta_pagamento)
+
+user_order_registration(product_question, name=name_question, city=city_question, payment=payment_question)
